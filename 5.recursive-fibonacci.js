@@ -4,3 +4,5 @@ if(n<2) return n
 }
 
 console.log(recursiveFibonacci(10))
+
+//Big-O - O(n)

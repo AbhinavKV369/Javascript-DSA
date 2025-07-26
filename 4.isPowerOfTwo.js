@@ -15,3 +15,5 @@ function isPowerOfTwo(n){
 }
 
 console.log(isPowerOfTwo(15))
+
+//Big-O - o(1)

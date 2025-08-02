@@ -46,8 +46,8 @@ const powerOfTwo = (n) => {
 };
 console.log(powerOfTwo(12));
 
-// recursion
 
+// recursion
 // recursive fibonacci series
 const recursionFibonacci = (n) => {
   if (n < 2) {

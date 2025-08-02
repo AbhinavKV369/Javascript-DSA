@@ -95,3 +95,13 @@ for(let i = name2.length;i>=1;i--){
     console.log(line)
 }
 
+const name1 = ["A", "B", "H", "I", "N", "A","V", " ", "K", "V"];
+
+for (let i = 0; i < name1.length; i++) {
+    let line = "";
+    for (let j = 0; j <= i; j++) {
+        line += " " + name1[j];
+    }
+    console.log(line);
+}
+

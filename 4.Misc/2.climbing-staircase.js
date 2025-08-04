@@ -6,5 +6,5 @@ for(let i = 2;i<steps;i++){
 
 return ways[steps-1];
 }
-const steps = 10;
+const steps = 10; 
 console.log(climbingStaircase(steps))

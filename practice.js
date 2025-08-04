@@ -46,6 +46,7 @@ const powerOfTwo = (n) => {
 };
 console.log(powerOfTwo(12));
 
+////////////////////////////////////////////////////////
 
 // recursion
 // recursive fibonacci series
@@ -59,25 +60,46 @@ console.log(recursionFibonacci(2));
 
 // recursive factorial of number;
 const recursiveFactorial = (n) => {
-    if(n === 1){
-        return 1
-    }
-    return n * recursiveFactorial(n-1);
-}
+  if (n === 1) {
+    return 1;
+  }
+  return n * recursiveFactorial(n - 1);
+};
 console.log(recursiveFactorial(5));
+
+
+////////////////////////////////////////////////////////////////////////
 
 // search algorithms
 
 // linear search
-const linearSearch = (arr,target) => {
-    for(let i = 0 ; i< arr.length - 1; i++){
-        if(arr[i] === target){
-            return i;
-        }
+const linearSearch = (arr, target) => {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] === target) {
+      return i;
     }
-}
-const arr = [1,3,2,3,4,7,9,8,9];
+  }
+};
+const arr = [1, 3, 2, 3, 4, 7, 9, 8, 9];
 const target = 9;
-console.log(linearSearch(arr,target));
+console.log(linearSearch(arr, target));
 
 // binary search
+function binarySearch(arr, target) {
+  let leftIndex = 0;
+  let rightIndex = arr.length - 1;
+  arr.sort((a, b) => a - b);
+  while (leftIndex <= rightIndex) {
+    let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
+    if (target === arr[middleIndex]) return middleIndex;
+    if (target > arr[middleIndex]) {
+      leftIndex = middleIndex + 1;
+    } else {
+      rightIndex = middleIndex - 1;
+    }
+  }
+  return -1;
+}
+console.log(binarySearch([1, 3, 2, 5, 6, 5, 6], 1));
+
+// binary recursive search

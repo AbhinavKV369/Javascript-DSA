@@ -49,3 +49,48 @@
 // console.log(q.size());    // 1
 // q.print();              // "10"
 
+// Optimized queue
+
+class Queue {
+    constructor() {
+        this.items = {};
+        this.frontIndex = 0; // Pointer to the front
+        this.rearIndex = 0;  // Pointer to the rear
+    }
+
+    enqueue(element) {
+        this.items[this.rearIndex] = element;
+        this.rearIndex++;
+    }
+
+    dequeue() {
+        if (this.isEmpty()) {
+            console.log("The queue is empty");
+            return null;
+        }
+        const value = this.items[this.frontIndex];
+        delete this.items[this.frontIndex];
+        this.frontIndex++;
+        return value;
+    }
+
+    peek() {
+        if (this.isEmpty()) {
+            console.log("The queue is empty");
+            return null;
+        }
+        return this.items[this.frontIndex];
+    }
+
+    isEmpty() {
+        return this.size() === 0;
+    }
+
+    size() {
+        return this.rearIndex - this.frontIndex;
+    }
+
+    print() {
+        console.log(this.items);
+    }
+}

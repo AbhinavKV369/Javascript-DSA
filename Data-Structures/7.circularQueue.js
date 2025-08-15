@@ -78,6 +78,7 @@ class CircularQueue {
     console.log(result.trim());
   }
 }
+
 const cq = new CircularQueue(5);
 
 cq.enqueue(10);

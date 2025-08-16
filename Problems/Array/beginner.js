@@ -126,7 +126,7 @@ function findSecondLargestNumber(){
     let largestNumber = -Infinity;
     let secondLargestNumber = -Infinity;
     for(let i = 0;i<array.length;i++){
-        if(array[i]>largest){
+        if(array[i]>largestNumber){
             secondLargestNumber = largestNumber;
             largestNumber = array[i];
         }else if(num>secondLargestNumber && num <largestNumber){

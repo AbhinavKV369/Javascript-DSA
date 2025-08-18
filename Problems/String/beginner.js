@@ -118,4 +118,4 @@ function replaceOldWithNew(string,oldChar,newChar){
   }
   return `The word ${oldChar} of the ${string} is replaced with ${newChar} and the result is ${result}`;
 }
-console.log(replaceOldWithNew("school","o","u"))
+console.log(replaceOldWithNew("school","o","u"));

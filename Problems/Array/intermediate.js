@@ -166,3 +166,4 @@ function replaceNegativeWithZero(){
   return array;
 }
 console.log(replaceNegativeWithZero());
+

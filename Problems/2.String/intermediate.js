@@ -73,7 +73,7 @@ console.log(countWords("Count the number of words in a sentence"));
 function duplicateCharacters(string) {
   let result = "";
   for (let i = 0; i < string.length; i++) {
-    if (result.includes(string[i])) {
+    if (!result.includes(string[i])) {
       result += string[i];
     }
   }
@@ -99,18 +99,18 @@ function frequentCharCount(string) {
 
   // count characters
   for (let char of string) {
-    if(/[a-zA-Z]/.test(char)){
+    if (/[a-zA-Z]/.test(char)) {
       charCount[char] = (charCount[char] || 0) + 1;
-      } 
+    }
   }
   let largest = 0;
   let mostFrequentChar;
   for (let index in charCount) {
-      if (charCount[index] > largest) {
-        largest = charCount[index];
-        mostFrequentChar = index;
-      }
+    if (charCount[index] > largest) {
+      largest = charCount[index];
+      mostFrequentChar = index;
     }
+  }
   return `${mostFrequentChar} appears ${largest} times`;
 }
 console.log(frequentCharCount("Find the most frequent character in a string"));

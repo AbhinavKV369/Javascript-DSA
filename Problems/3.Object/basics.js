@@ -41,3 +41,4 @@ console.log(Object.entries(student));
 
 // Find the number of properties in an object
 console.log(Object.keys(student).length);
+

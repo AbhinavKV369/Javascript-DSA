@@ -91,9 +91,6 @@ q.enqueue(1);
 q.enqueue(2);
 q.enqueue(3);
 q.enqueue(4);
-
 console.log("Original queue:", q.items);
-
 reverseQueue(q);
-
 console.log("Reversed queue:", q.items);
